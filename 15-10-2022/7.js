@@ -1,15 +1,39 @@
-let arr=[];
+let n=5
+const arr=new Array(n);
+let r=0,f=0;
 
-// arr.push([5,1]);
-if(arr.length)
-{
-    console.log('yes')
+enqueue(2);
+enqueue(5);
+enqueue(7);
+enqueue(8);
+enqueue(2);
+
+dequeue()
+dequeue()
+dequeue()
+dequeue()
+dequeue()
+dequeue()
+
+function enqueue(n){
+    if(r===n)
+    {
+        console.log('overflow')
+        return;
+    }
+    
+    arr[r++]=n;
 }
-else{
-    console.log('no')
+
+function dequeue(){
+    if(f===r)
+    {
+        console.log('Underflow');
+        return;
+    }
+
+    console.log(arr[f++]);
 }
 
-console.log(arr.length)
 
-let arr2=[1,2,3,4];
-console.log(Math.max(...arr2))
+
