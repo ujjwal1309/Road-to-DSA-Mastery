@@ -69,18 +69,14 @@ class linkedList {
       }
 
       //insert at the index
-
       prev.next = node;
 
       // move to the inserted node
-
       prev = prev.next;
 
       // add the rest of the current to the inserted node
-
       prev.next = current;
 
-      //increment size
     }
 
     this.size++;
@@ -105,8 +101,13 @@ class linkedList {
 
       prev = current;
       current = current.next;
-      this.size--
+      console.log(current)
+
     }
+
+
+    this.size--;
+
   }
 }
 
@@ -117,6 +118,9 @@ l.add(2);
 l.add(3);
 l.add(4);
 l.insertAt(15, 0);
+l.delete(2)
 l.print();
 
-console.log(l);
+//------------------------------------------------------------------------------------------->
+
+//the head of the node is clearly
