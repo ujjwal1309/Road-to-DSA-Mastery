@@ -15,9 +15,14 @@ head.next=second;
 second.next=third;
 insertAtTail(2);
 insertAtMiddle(12,2);
-deelete(2)
+remove(1);
+add(14)
+add(15)
+add(100)
 
 // console.log(head)
+
+rev();
 
 print()
 //Now make a fn which will print it
@@ -80,13 +85,72 @@ function insertAtMiddle(el,p){
 // Now For Deletion Of Elements in linked list
 
 
-function deelete(el){
-    let c=head,prev=null;
-    while(c.data!==el){
-        prev=c;
+// function deelete(el){
+//     let c=head,prev=null;
+//     while(c.data!==el){
+//         prev=c;
+//         c=c.next;
+//     }
+
+//     prev.next=c.next;
+// }
+
+// Now we have to delete a Linked List Node How do we do that
+
+function remove(position){
+
+    let current=head;
+    let prev=null;
+
+    while(current.data!==position)
+    {
+        prev=current;
+        current=current.next;
+    }
+
+    !prev ? head=current.next : prev.next=current.next;
+
+}
+
+
+// Let's see how can we reverse the Linked List
+
+function rev(){
+    let c=head;
+    let p=null;
+    let f=null;
+
+    while(c){
+        f=c.next;
+        c.next=p;
+        p=c;
+        c=f;
+        f=null;
+    }
+
+    head=p;
+
+}
+
+function add(el){
+    let c=head;
+    while(c.next){
         c=c.next;
     }
 
-    prev.next=c.next;
+    let node = new Node(el);
+
+    (!head) ? head=node : c.next=node;
+    
+    
 }
+
+
+// How to make a linked list
+// Add elements into a linked list
+//Delet node from LL
+//Reverse LL
+//Print ll
+
+//Linked list is very awesome
 
