@@ -7,7 +7,7 @@ function buySomeHouses(arr,n){
         }
     }
 
-    console.log(obj.size)
+    console.log(obj.size);
 }
 
 function runProgram(input) {
