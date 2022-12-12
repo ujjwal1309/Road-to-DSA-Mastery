@@ -19,7 +19,7 @@ function gamblingAddict(arr,n){
 
     }
 
-    console.log(ans.join(' '))
+    console.log(ans.join(' '));
 
 }
 
